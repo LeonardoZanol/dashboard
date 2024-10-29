@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -21,7 +22,7 @@
     </header>
 
     <aside class="menu-lateral">
-        <ul class="menu">
+        <ul>
             <li><a href="#">Dashboard</a></li>
             <li><a href="#">Relatórios</a></li>
             <li><a href="#">Configurações</a></li>
@@ -30,30 +31,38 @@
 
     <main>
         <section class="cards-estatistica">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div>Card 1</div>
+            <div>Card 2</div>
+            <div>Card 3</div>
+            <div>Card 4</div>
         </section>
 
         <section class="atividades-recentes">
             <h2>Atividades Recentes</h2>
 
             <div class="atividade">
-                <span class="tipo-atividade">Transferência Recebida</span>
-                <span class="data-atividade">28 de Outubro de 2024</span>
+                <div>
+                    <span class="tipo-atividade">Transferência Recebida</span>
+                    <span class="data-atividade">28 de Outubro de 2024</span>
+                </div>
             </div>
             <div class="atividade">
-                <span class="tipo-atividade">Transferência Enviada</span>
-                <span class="data-atividade">26 de Outubro de 2024</span>
+                <div>
+                    <span class="tipo-atividade">Transferência Enviada</span>
+                    <span class="data-atividade">26 de Outubro de 2024</span>
+                </div>
             </div>
             <div class="atividade">
-                <span class="tipo-atividade">Transferência Enviada</span>
-                <span class="data-atividade">20 de Outubro de 2024</span>
+                <div>
+                    <span class="tipo-atividade">Transferência Enviada</span>
+                    <span class="data-atividade">20 de Outubro de 2024</span>
+                </div>
             </div>
             <div class="atividade">
-                <span class="tipo-atividade">Transferência Recebida</span>
-                <span class="data-atividade">15 de Outubro de 2024</span>
+                <div>
+                    <span class="tipo-atividade">Transferência Recebida</span>
+                    <span class="data-atividade">15 de Outubro de 2024</span>
+                </div>
             </div>
         </section>
     </main>
@@ -61,7 +70,9 @@
     <footer>
         <p>&copy; 2024 Zanol Leonardo. Todos os direitos reservados</p>
         <nav class="links-rodape">
-            <p><a href="#">Termos de Uso</a> | <a href="#">Privacidade</a></p>
+            <a href="#">Termos de Uso</a>
+            |
+            <a href="#">Privacidade</a></p>
         </nav>
     </footer>
 </body>
