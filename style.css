@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -13,31 +14,26 @@ header {
     top: 0;
     width: 100%;
     background-color: #031c53;
-    color: white;
+    color: #fff;
     padding: 10px 20px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     z-index: 100;
 }
 
-.barra-navegacao {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .barra-navegacao ul {
-    list-style-type: none;
     display: flex;
-    gap: 15px;
+    list-style-type: none;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 5px 10px;
 }
 
 .barra-navegacao ul a {
-    color: white;
     text-decoration: none;
+    color: #fff;
     display: inline-block;
-    padding: 5px 10px;
     transition: transform 0.3s ease;
 }
 
@@ -45,8 +41,17 @@ header {
     transform: scale(1.1);
 }
 
-.notificacao {
+.notificacoes {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notificacoes img {
+    width: 30px;
+    height: auto;
+    filter: invert(1);
 }
 
 .badge {
@@ -54,10 +59,11 @@ header {
     top: -5px;
     right: -5px;
     background-color: red;
-    color: white;
-    border: 50%;
+    color: #fff;
+    border-radius: 50%;
     padding: 2px 6px;
-    font-size: 0.8em;
+    font-size: 0.7rem;
+    font-weight: bold;
 }
 
 .menu-lateral {
@@ -73,7 +79,7 @@ header {
 
 .menu-lateral ul {
     list-style-type: none;
-    padding-left: 20px;
+    padding: 10px;
 }
 
 .menu-lateral ul li {
@@ -91,6 +97,12 @@ header {
 
 .menu-lateral ul a:hover {
     transform: scale(1.1);
+}
+
+.menu-lateral img {
+    width: 30px;
+    height: auto;
+    filter: invert(1);
 }
 
 main {
@@ -118,23 +130,23 @@ main {
     text-align: center;
 }
 
-.atividades-recentes {
+.movimentacao-recentes {
     width: 100%;
-    max-width: 600px;
+    max-width: 300px;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding: 20px;
     margin: 20px;
 }
 
-.atividades-recentes h2 {
+.movimentacao-recentes h2 {
     text-align: center;
     color: black;
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
-.atividade {
+.movimento {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -142,18 +154,31 @@ main {
     border-bottom: 1px solid #ddd;
 }
 
-.atividade div {
+.movimento div {
     display: flex;
     flex-direction: column;
 }
 
-.tipo-atividade {
+.tipo-movimento {
     font-weight: bold;
 }
 
-.data-atividade {
+.data-movimento {
     font-size: 0.9rem;
     color: #888;
+}
+
+.movimento img {
+    width: 30px;
+    height: auto;
+}
+
+.recebida {
+    filter: brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(1000%) hue-rotate(90deg) brightness(95%) contrast(105%);
+}
+
+.enviada {
+    filter: brightness(0) saturate(100%) invert(30%) sepia(100%) saturate(1000%) hue-rotate(0deg) brightness(95%) contrast(105%);;
 }
 
 footer {
