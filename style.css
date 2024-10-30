@@ -110,13 +110,13 @@ header {
 }
 
 main {
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: 260px;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    margin-bottom: 90px;
 }
 
 .cards-estatistica {
@@ -224,8 +224,6 @@ main {
 .cor3 { background-color: #FFC107; }
 .cor4 { background-color: #FF5722; }
 
-
-
 .atividades-recentes, .movimentacao-recentes {
     width: 100%;
     background-color: #fff;
@@ -233,10 +231,7 @@ main {
     padding: 20px;
     margin: 20px;
     max-width: 600px;
-}
-
-.movimentacao-recentes {
-    margin-bottom: 90px;
+    min-width: 400px;
 }
 
 .atividades-recentes h2, .movimentacao-recentes h2 {
