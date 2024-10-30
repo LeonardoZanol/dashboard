@@ -6,7 +6,9 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    min-height: 100vh;
+    min-height: calc(100vh - (20 + 20));
+    overflow: auto;
+    overflow-x: hidden;
 }
 
 header {
@@ -20,6 +22,7 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    margin: 0;
 }
 
 .barra-navegacao ul {
@@ -73,8 +76,9 @@ header {
     width: 250px;
     height: 100%;
     background-color: #012677;
-    color: white;
-    padding: 20px;
+    color: #fff;
+    padding-left: 10px;
+    transition: width 0.3s ease;
 }
 
 .menu-lateral ul {
@@ -83,11 +87,11 @@ header {
 }
 
 .menu-lateral ul li {
-    margin: 20px;
+    margin-top: 20px;
 }
 
 .menu-lateral ul a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -106,11 +110,11 @@ header {
 }
 
 main {
-    margin-top: 60px;
-    margin-left: 270px;
+    margin-top: 30px;
+    margin-left: 260px;
     padding: 20px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -118,6 +122,7 @@ main {
 .cards-estatistica {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     padding: 20px;
     background-color: #f9f9f9;
@@ -133,7 +138,9 @@ main {
 }
 
 .card:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .grafico-vendas, .grafico-crescimento-semanal {
@@ -225,14 +232,11 @@ main {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding: 20px;
     margin: 20px;
-}
-
-.atividades-recentes {
     max-width: 600px;
 }
 
 .movimentacao-recentes {
-    max-width: 300px;
+    margin-bottom: 90px;
 }
 
 .atividades-recentes h2, .movimentacao-recentes h2 {
@@ -310,4 +314,29 @@ footer {
 
 .links-rodape a:hover {
     transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    main {
+        margin-left: 30px;
+        width: calc(100vw - 65px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-lateral {
+        width: 50px;
+        padding-left: 0;
+    }
+
+    .menu-lateral span {
+        display: none;
+    }
+
+    .card:hover {
+        transform: none;
+        box-shadow: none;
+        transition: none;
+    }
 }
