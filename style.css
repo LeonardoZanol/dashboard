@@ -200,13 +200,17 @@ main {
     justify-content: center;
 }
 
-.grafico-rosca::before {
+.texto-central {
     content: "";
     width: 150px;
     height: 150px;
-    background-color: #fff;
+    background-color: #eee;
     border-radius: 50%;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 
 .texto-central {
